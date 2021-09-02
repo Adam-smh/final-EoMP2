@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=WindSong&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+.header {
+  position: fixed;
+  left: 87%;
+  top: 16px;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+  z-index: 2;
+
+  font-family: sans-serif;
+  font-size: 13px;
+
+  color: beige;
+}
+
+.su {
+  border-right: beige solid 1px;
+  padding-right: 10px;
+
+  cursor: pointer;
+}
+
+/* .su:hover {
+  color: gold;
+} */
+
+.su.active {
+  display: none;
+}
+
+.c {
+  cursor: pointer;
+}
+
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Landing {
+  display: flex;
+  flex-direction: row;
+
+  background: url(/Pictures/idea14.png);
+  background-size: cover;
+}
+
+.ldiv {
+  height: 100vh;
+  width: 7%;
+
+  position: fixed;
+  z-index: 2;
+
+  border-right: white solid;
+}
+
+.innerldiv {
+  height: -webkit-fill-available;
+  transition: 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  color: beige;
+}
+
+.innerldiv:hover {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+.ologo {
+  font-family: "Nanum Myeongjo", serif;
+
+  font-size: 94px;
+
+  cursor: context-menu;
+}
+
+.nav {
+  cursor: pointer;
+}
+
+.ftxt {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+}
+
+.ftxt2 {
+  font-family: "WindSong", sans-serif;
+  text-transform: uppercase;
+
+  font-size: 20px;
+}
+
+.ltxtc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: 60px;
+  flex-direction: column-reverse;
+}
+
+.ltxt {
+  display: flex;
+  align-items: center;
+
+  color: beige;
+
+  gap: 315px;
+  margin-left: 80px;
+}
+
+.two {
+  background: black;
+  background-size: cover;
+
+  color: beige;
+}
+
+.three {
+  background: url("/Pictures/other2.png");
+  background-size: cover;
+}
+
+.four {
+  background: #00dfdf;
+}
