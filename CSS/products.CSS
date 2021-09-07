@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
+.productimg {
+  width: 130px;
+  max-height: 130px;
+}
+
+.item {
+  color: beige;
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 1%;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 51%;
+}
+
+.phead {
+  color: azure;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  margin-top: 10px;
+}

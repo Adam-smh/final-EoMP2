@@ -5,9 +5,13 @@ token found. If there is a token the option wont appear. */
 
 // checking for token
 function check() {
+  let other = document.querySelector(".li");
+  let user = window.localStorage.username;
   let ok = document.querySelector(".su");
   if (window.localStorage["jwt-token"]) {
     ok.classList.toggle("active");
+    other.classList.toggle("active");
+    document.getElementById("li").innerHTML = user;
   }
 }
 
@@ -15,16 +19,19 @@ check();
 
 /* If there isnt a token, the cart will redirect you to 
 a register page */
-function cart() {
+function carto() {
   if (window.localStorage["jwt-token"]) {
-    console.log("teabag");
+    document.querySelector(".cartContainer").classList.toggle("active");
   } else {
     window.location.href = "./signup.html";
   }
 }
 
 document.querySelector(".cart_icon").addEventListener("click", () => {
-  cart();
+  carto();
+});
+document.querySelector(".close").addEventListener("click", () => {
+  carto();
 });
 
 let signup = document.querySelector(".su");
@@ -32,8 +39,9 @@ let signup = document.querySelector(".su");
 /* sign in button (if token is not found) will allow you
 to be redirected to signup page */
 function sign() {
+  console.log("hoe");
   if (window.localStorage["jwt-token"]) {
-    signup.classList.toggle(".active");
+    signup.classList.toggle("active");
     console.log("hoe");
   } else {
     window.location.href = "./signup.html";
@@ -41,5 +49,6 @@ function sign() {
 }
 
 document.querySelector(".su").addEventListener("click", () => {
-  cart();
+  carto();
+  sign();
 });

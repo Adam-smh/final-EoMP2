@@ -13,17 +13,22 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
   width: 400vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
+  background-size: contain;
+  background-position: center;
 }
 
 .header {
   position: fixed;
-  left: 87%;
+  left: 79%;
   top: 16px;
 
   display: flex;
@@ -34,6 +39,7 @@ html {
 
   font-family: sans-serif;
   font-size: 13px;
+  text-transform: uppercase;
 
   color: beige;
 }
@@ -84,6 +90,17 @@ html {
 
   background: url(/Pictures/idea14.png);
   background-size: cover;
+}
+.li {
+  display: none;
+}
+.li.active {
+  border-right: beige solid 1px;
+  padding-right: 10px;
+
+  cursor: pointer;
+
+  display: block;
 }
 
 .ldiv {
@@ -156,17 +173,101 @@ html {
 }
 
 .two {
-  background: black;
   background-size: cover;
+  background: #0c0c0a;
+
+  display: flex;
+  align-items: center;
 
   color: beige;
 }
 
-.three {
-  background: url("/Pictures/other2.png");
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 10%;
+  padding-left: 0%;
+  padding-bottom: 10%;
+}
+.inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 10%;
+}
+.txtcontainer {
+  display: flex;
+  flex-direction: row;
+
+  width: 40%;
+  min-width: 300px;
+  margin: 1%;
+
+  overflow: hidden;
+  padding: 35px;
+  font-family: "Montserrat";
+  color: #f5f3f4;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+}
+
+.tc1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/Pictures/people/bwa.jpg");
+  object-fit: contain;
   background-size: cover;
+  background-position: center;
+}
+.tc2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/Pictures/people/Ronald-Terblanche-1-ConvertImage.jpg");
+  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+}
+.tc3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/Pictures/people/Zoe-Erispe-2-ConvertImage.jpg");
+  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+}
+.txt {
+  opacity: 0;
+}
+
+.three {
+  background: url(/Pictures/backgrounds/joel-jasmin-forestbird-N7WKDfi0yqQ-unsplash.jpg);
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .four {
   background: #00dfdf;
+}
+
+.cartContainer {
+  position: fixed;
+  top: -100vh;
+  height: 100vh;
+  width: 500px;
+  background: white;
+  z-index: 3;
+  right: 0;
+  transition: 0.5s ease;
+}
+
+.cartContainer.active {
+  top: 0;
 }

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erispe8</title>
     <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/products.CSS" />
   </head>
   <body>
+    <div class="cartContainer"><i class="fas fa-times close"></i></div>
     <div class="header">
-      <h1 class="li"></h1>
+      <h1 class="li" id="li"></h1>
       <h1 class="su">Sign up</h1>
       <span class="cart_icon">
         <i class="fab fa-opencart fa-2x c"></i>
@@ -37,8 +39,48 @@
             </div>
           </div>
         </div>
-        <div class="slide two"></div>
-        <div class="slide three"></div>
+        <div class="slide two">
+          <div class="container">
+            <div class="txtcontainer tc1">
+              <h5 class="Name">
+                Adam Africa<br /><span class="job">-CEO-</span>
+              </h5>
+
+              <q class="txt"
+                >He is meticulous with everything he does, from designing a
+                website, to creating an application. He has shown an ability to
+                thrive in this industry as he has always been on top of the work
+                he does. He’d make an amazing full-stack developer</q
+              >
+            </div>
+            <div class="txtcontainer tc2">
+              <h5 class="Name">
+                Ronald Terblanche <br /><span class="job">-Janitor-</span>
+              </h5>
+              <q class="txt"
+                >Adam is an outstanding fullstack developer. Working with him is
+                always a delight due to his conscientious nature. I believe he
+                will make a great impact in the tech industry.</q
+              >
+            </div>
+            <div class="txtcontainer tc3">
+              <h5 class="Name">
+                Zoe Erispe <br /><span class="job">-Cosmetics-</span>
+              </h5>
+              <q class="txt"
+                >Adam is a skilled individual who is wiling to share his
+                knowledge with his fellow classmates, he is a kind person who is
+                willing to go the extra mile to make sure his projects are up to
+                standard. My interaction with him is always a fun and an
+                intellectual experience.</q
+              >
+            </div>
+          </div>
+        </div>
+        <div class="slide three">
+          <h1 class="phead">Our Selection</h1>
+          <div class="products"></div>
+        </div>
       </div>
     </div>
     <!-- Font Awesome Icons -->
@@ -47,5 +89,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/JS/signup.js"></script>
+    <script src="/JS/products.js"></script>
+    <script src="/JS/cart.js"></script>
   </body>
 </html>
