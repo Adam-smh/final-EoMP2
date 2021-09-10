@@ -40,3 +40,47 @@ function getProducts(url) {
 }
 
 getProducts(Url);
+
+cart = JSON.parse(window.localStorage["cart"]);
+
+function showCart(cart) {
+  console.log(cart);
+  var total = 0;
+  document.querySelector(".innerpc").innerHTML = "";
+  cart.forEach((item) => {
+    document.querySelector(".innerpc").innerHTML += `<div class="items">
+      <img class="pimg" src="${item.img}" alt="" />
+      <div class="infoContainer">
+        <div class="namePriceContainer">
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+        </div>
+        <div class="qtyRemoveContainer">
+          <button class="removeButton" id="${item.name}"  onclick="removeFromCart(this.id)">Remove</button>
+        </div>
+      </div>
+    </div>`;
+
+    price = item.price.split("");
+
+    total += parseInt(price.splice(1, price.length).join(""));
+  });
+  document.querySelector(".innerpc").innerHTML += ` <div class="totalContainer">
+                                                  <p class="totalHeading">Total: </p><p class="total">R${total}</p>    
+                                              </div>`;
+}
+
+showCart(cart);
+
+function removeFromCart(itemName) {
+  console.log(itemName);
+  for (let x in cart) {
+    if (itemName == cart[x].name) {
+      cart.splice(x, 1);
+      console.log(cart);
+      window.localStorage["cart"] = JSON.stringify(cart);
+    }
+  }
+
+  showCart(cart);
+}

@@ -10,7 +10,7 @@ function register() {
   let email = document.querySelector(".email").value;
   let username = document.querySelector(".username").value;
   let password = document.querySelector(".password").value;
-  console.log(firstName, lastName, email, username, password);
+  console.log(firstName, lastName, email, username, password, user_id);
 
   fetch(`https://serene-sea-89440.herokuapp.com/get-user/${username}/`, {
     method: "GET",
@@ -44,6 +44,7 @@ function register() {
               myStorage.setItem("jwt-token", data["access_token"]);
               myStorage.setItem("username", username);
               myStorage.setItem("password", password);
+              myStorage.setItem("user_id", user_id);
               window.location.href = "./index.html";
             }
           });

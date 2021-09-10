@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=WindSong&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Montserrat:wght@100&display=swap");
 
 * {
   padding: 0%;
@@ -13,7 +15,20 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.admin {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: beige;
+  position: fixed;
+  top: 40%;
+  z-index: -1;
+  right: 20%;
+  width: 50%;
+  height: 20%;
+}
+.admin.active {
+  z-index: 9;
 }
 
 .wrapper {
@@ -28,7 +43,7 @@ body {
 
 .header {
   position: fixed;
-  left: 79%;
+  right: 1%;
   top: 16px;
 
   display: flex;
@@ -86,10 +101,11 @@ body {
 
 .Landing {
   display: flex;
-  flex-direction: row;
-
+  justify-content: center;
+  align-items: flex-end;
   background: url(/Pictures/idea14.png);
   background-size: cover;
+  background-position: center;
 }
 .li {
   display: none;
@@ -103,9 +119,20 @@ body {
   display: block;
 }
 
+.lc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: beige;
+  width: 93%;
+  height: 100%;
+  margin-left: 80px;
+}
+
 .ldiv {
   height: 100vh;
-  width: 7%;
+  width: 80px;
 
   position: fixed;
   z-index: 2;
@@ -154,38 +181,38 @@ body {
   font-size: 20px;
 }
 
-.ltxtc {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  margin-left: 60px;
-  flex-direction: column-reverse;
-}
-
-.ltxt {
-  display: flex;
-  align-items: center;
-
-  color: beige;
-
-  gap: 315px;
-  margin-left: 80px;
-}
-
 .two {
   background-size: cover;
   background: #0c0c0a;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   color: beige;
+}
+
+.mt {
+  font-family: "Jura", sans-serif;
+  text-transform: uppercase;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.in {
+  color: #f5f3f4;
+
+  text-decoration: none;
+
+  transition: 0.5s ease-in-out;
+}
+.in:hover {
+  color: #03071e;
 }
 
 .inner-container {
@@ -204,19 +231,20 @@ body {
 }
 .txtcontainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 
   width: 40%;
   min-width: 300px;
   margin: 1%;
-
-  overflow: hidden;
   padding: 35px;
-  font-family: "Montserrat";
-  color: #f5f3f4;
-  display: flex;
-  flex-direction: column;
+
   font-weight: 800;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+
+  color: #f5f3f4;
+  overflow: hidden;
 }
 
 .tc1 {
@@ -244,9 +272,15 @@ body {
   opacity: 0;
 }
 
+.Name {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .three {
   background: url(/Pictures/backgrounds/joel-jasmin-forestbird-N7WKDfi0yqQ-unsplash.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -254,14 +288,47 @@ body {
 }
 
 .four {
-  background: #00dfdf;
+  background: url("/Pictures/backgrounds/john-karlo-mendoza-iqYClBrohq4-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fh {
+  color: beige;
+  font-family: "Jura", sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input {
+  width: 300px;
+  height: 22px;
+  border: none;
+  border-radius: 24px;
 }
 
 .cartContainer {
   position: fixed;
-  top: -100vh;
+  top: -110vh;
   height: 100vh;
-  width: 500px;
+  width: 100%;
   background: white;
   z-index: 3;
   right: 0;
@@ -270,4 +337,38 @@ body {
 
 .cartContainer.active {
   top: 0;
+}
+
+.opennav {
+  position: fixed;
+  top: 100%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+
+  transition: 0.3s ease-in-out;
+}
+
+.opennav.active {
+  top: 0%;
+}
+
+.innernav {
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: beige;
+
+  backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+}
+
+.ref {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f5f3f4;
+  font-family: "Jura", sans-serif;
+  font-size: 37px;
 }

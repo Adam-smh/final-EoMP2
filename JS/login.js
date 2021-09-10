@@ -36,12 +36,16 @@ function login() {
           .then((data) => {
             console.log(data);
             window.localStorage["user-id"] = data.user[0];
+            var user_id = data.user[0];
+            console.log(data);
+            myStorage = window.localStorage;
+            myStorage.setItem("user_id", user_id);
+
+            myStorage.setItem("username", username);
+            window.location = "./index.html";
           });
-        console.log(data);
         myStorage = window.localStorage;
         myStorage.setItem("jwt-token", data["access_token"]);
-        myStorage.setItem("username", username);
-        window.location = "./index.html";
       }
     });
 }

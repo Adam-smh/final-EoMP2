@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erispe8</title>
     <link rel="stylesheet" href="/CSS/main.css" />
-    <link rel="stylesheet" href="/CSS/products.CSS" />
+    <link rel="stylesheet" href="/CSS/products.CSS">
   </head>
   <body>
-    <div class="cartContainer"><i class="fas fa-times close"></i></div>
+    <div class="admin">
+      <button class="ap">Admin</button>
+    </div>
+    <div class="opennav">
+      <div class="innernav">
+        <div class="navitem">
+          <a class="ref" href="/products.html">00.Products</a>
+        </div>
+        <div class="navitem"><a class="ref" href="#1">01.Landing</a></div>
+        <div class="navitem">
+          <a class="ref" href="#2">02.Meet the team</a>
+        </div>
+        <div class="navitem"><a class="ref" href="#3">03.about us</a></div>
+        <div class="navitem"><a class="ref" href="#4">04.contact us</a></div>
+      </div>
+    </div>
+    <div class="cartContainer">
+      <i class="fas fa-times close"></i>
+      <div class="innerpc"></div>
+    </div>
     <div class="header">
       <h1 class="li" id="li"></h1>
       <h1 class="su">Sign up</h1>
@@ -25,61 +44,106 @@
     <div class="outer-wrapper">
       <div class="wrapper">
         <div class="footer"></div>
-        <div class="slide Landing">
-          <div class="ltxtc">
-            <div class="ltxt">
-              <h1 class="ftxt">
-                dont say it,<br /><span class="subfront">show it</span>
-              </h1>
-              <i class="fas fa-arrows-alt-h fa-2x"></i>
-              <h1 class="ftxt2">
-                adam africa <br />
-                selection
-              </h1>
-            </div>
+        <div class="slide Landing" id="1">
+          <div class="lc">
+            <h1 class="ftxt">
+              dont say it,<br /><span class="subfront">show it</span>
+            </h1>
+            <i class="fas fa-arrows-alt-h fa-2x"></i>
+            <h1 class="ftxt2">
+              adam africa <br />
+              selection
+            </h1>
           </div>
         </div>
-        <div class="slide two">
+        <div class="slide two" id="2">
+          <h1 class="mt">meet the team</h1>
           <div class="container">
             <div class="txtcontainer tc1">
               <h5 class="Name">
                 Adam Africa<br /><span class="job">-CEO-</span>
-              </h5>
-
-              <q class="txt"
-                >He is meticulous with everything he does, from designing a
-                website, to creating an application. He has shown an ability to
-                thrive in this industry as he has always been on top of the work
-                he does. He’d make an amazing full-stack developer</q
-              >
+              </h5><a class="insta" href="https://www.instagram.com/adam_africa_smh/"><i class="fab fa-instagram in"></i></a>
+             
             </div>
             <div class="txtcontainer tc2">
               <h5 class="Name">
                 Ronald Terblanche <br /><span class="job">-Janitor-</span>
-              </h5>
-              <q class="txt"
-                >Adam is an outstanding fullstack developer. Working with him is
-                always a delight due to his conscientious nature. I believe he
-                will make a great impact in the tech industry.</q
-              >
+              </h5><a class="insta" href="https://www.instagram.com/ron_bon.x_x/"><i class="fab fa-instagram in"></i></a>
             </div>
             <div class="txtcontainer tc3">
               <h5 class="Name">
                 Zoe Erispe <br /><span class="job">-Cosmetics-</span>
-              </h5>
-              <q class="txt"
-                >Adam is a skilled individual who is wiling to share his
-                knowledge with his fellow classmates, he is a kind person who is
-                willing to go the extra mile to make sure his projects are up to
-                standard. My interaction with him is always a fun and an
-                intellectual experience.</q
-              >
+              </h5><a class="insta" href="https://www.instagram.com/zedmcleafy/"><i class="fab fa-instagram in"></i></a>
+              </i>
             </div>
           </div>
         </div>
-        <div class="slide three">
-          <h1 class="phead">Our Selection</h1>
-          <div class="products"></div>
+        <div class="slide three" id="3">
+          <h1 class="Th">about us</h1>
+          <p class="ap">Here at Ersipe8, we believe in quality over quantity. This small selection of hair products will start your day with a bang. </p>
+        </div>
+        <div class="slide four" id="4">
+          <h1 class="fh">contact us</h1>
+          <div class="form">
+            <form
+              id="form"
+              action="https://formspree.io/f/mleajjaa"
+              method="POST"
+            >  
+              <!--Name-->
+              <div class="info">
+                <label class="label" for="name"></label>
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter Username"
+                  required
+                />
+              </div>
+  
+              <!--Email-->
+              <div class="info">
+                <label class="label" for="email"></label>
+                <input
+                  class="input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Insert Email"
+                  required
+                />
+              </div>
+  
+              <!--Phone Number-->
+              <div class="info">
+                <label class="label" for="number"></label>
+                <input
+                  class="input"
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Please Enter Phone Number"
+                  required
+                />
+              </div>
+  
+              <!--Message-->
+              <div class="info">
+                <label class="label"></label>
+                <textarea
+                  class="input"
+                  name="message"
+                  placeholder="Type Mesage Here"
+                ></textarea>
+              </div>
+  
+              <!-- Button -->
+              <button id="button" class="input" type="submit">Send</button>
+            </form>
+          
+          </div>
         </div>
       </div>
     </div>
@@ -91,5 +155,7 @@
     <script src="/JS/signup.js"></script>
     <script src="/JS/products.js"></script>
     <script src="/JS/cart.js"></script>
+    <script src="/JS/Navbar.js"></script>
+    <script src="/JS/admina.js"></script>
   </body>
 </html>

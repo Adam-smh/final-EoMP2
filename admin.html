@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erispe8 - Admin</title>
+    <link rel="stylesheet" href="/CSS/admin.CSS" />
+  </head>
+  <body>
+    <div class="productcontainer"></div>
+    <div class="modalouter">
+      <div class="modal"></div>
+    </div>
+    <div class="addp">
+      <form class="idk">
+        <input class="iName" type="text" placeholder="Name" />
+        <input class="iCategory" type="text" placeholder="Category" />
+        <input class="iDescription" type="text" placeholder="Description" />
+        <input class="iPrice" type="number" placeholder="Price" />
+        <input
+          class="iImage"
+          type="file"
+          onchange="File(document.querySelector('.dImg'), document.querySelector('.iImage'));"
+        />
+        <img class="dImg" src="" height="200" alt="Image" />
+
+        <button class="stuff" onsubmit="return false">Submit</button>
+      </form>
+    </div>
+    <script src="/JS/admin.js"></script>
+  </body>
+</html>
