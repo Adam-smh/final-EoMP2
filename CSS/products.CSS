@@ -76,6 +76,12 @@ body {
   width: 51%;
 }
 
+.addbtn {
+  border: none;
+  border-radius: 20px;
+  width: 80px;
+}
+
 .phead {
   color: azure;
   display: flex;
@@ -86,4 +92,12 @@ body {
 
 .pimg {
   height: 100px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 40px;
 }

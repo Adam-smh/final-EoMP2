@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap");
+
 * {
   padding: 0%;
   margin: 0%;
@@ -7,4 +9,50 @@
 body {
   width: 100vw;
   height: 100vh;
+
+  background: url("/Pictures/idea3.png");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s {
+  font-family: "Jura", sans-serif;
+
+  color: beige;
+}
+
+.form2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+input {
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+}
+
+.login {
+  /* text-decoration: none; */
+  font-family: sans-serif;
+
+  color: beige;
+}
+
+.signbtn {
+  border: none;
+  border-radius: 20px;
+
+  background-color: beige;
+  color: 111f;
+
+  width: 80px;
 }

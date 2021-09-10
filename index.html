@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erispe8</title>
+    
+    <!-- My CSS Files -->
     <link rel="stylesheet" href="/CSS/main.css" />
     <link rel="stylesheet" href="/CSS/products.CSS">
+
   </head>
   <body>
+
+    <!-- admin class used for displaying amin controls and allowing sign out function and edit profile function -->
     <div class="admin">
-      <button class="ap">Admin</button>
+      <!-- button to access admin page -->
+      <button class="ap abtns">Admin</button>
+      <button class="lo abtns">Log Out</button>
     </div>
+
+    <!-- Nav bar div -->
     <div class="opennav">
       <div class="innernav">
+        <!-- nav items being each link for each part of the site -->
         <div class="navitem">
           <a class="ref" href="/products.html">00.Products</a>
         </div>
@@ -25,25 +35,35 @@
         <div class="navitem"><a class="ref" href="#4">04.contact us</a></div>
       </div>
     </div>
+
+    <!-- cart container used to display what is in the cart and its functions eg. remove -->
     <div class="cartContainer">
-      <i class="fas fa-times close"></i>
+      <!-- cart using toggle to choose when it displays -->
+      <i class="fas fa-times fa-2x close"></i>
       <div class="innerpc"></div>
     </div>
+    <!-- header contains account options and cart -->
     <div class="header">
+      <!-- li class displays using jwt token when user is logged in -->
       <h1 class="li" id="li"></h1>
+      <!-- if user is not logged in the sign up option will present itself to the user -->
       <h1 class="su">Sign up</h1>
+      <!-- cart icon used to display cart -->
       <span class="cart_icon">
         <i class="fab fa-opencart fa-2x c"></i>
       </span>
     </div>
+    <!-- ldiv used to display sidebar for logo and navbar and extra links -->
     <div class="ldiv">
       <div class="innerldiv">
         <h class="ologo">8</h><i class="fas fa-bars fa-2x nav"></i>
       </div>
     </div>
+    <!-- wrappers used to organise page and to add horizontal scroll effect -->
     <div class="outer-wrapper">
       <div class="wrapper">
         <div class="footer"></div>
+        <!-- Landing is the home page used to catch the eyes of the user-->
         <div class="slide Landing" id="1">
           <div class="lc">
             <h1 class="ftxt">
@@ -56,6 +76,7 @@
             </h1>
           </div>
         </div>
+        <!-- slide 2 allows the user to see the team -->
         <div class="slide two" id="2">
           <h1 class="mt">meet the team</h1>
           <div class="container">
@@ -78,12 +99,22 @@
             </div>
           </div>
         </div>
+        <!-- slide 3 tells the user a little more about the company -->
         <div class="slide three" id="3">
           <h1 class="Th">about us</h1>
-          <p class="ap">Here at Ersipe8, we believe in quality over quantity. This small selection of hair products will start your day with a bang. </p>
+          <p class="bp">Here at Ersipe8, we believe in quality over quantity. <br />
+             This small selection of hair products will start your day with a bang. From quick fixes for
+              <br /> your hair to perfect maintanance options.</p>
+          
+              <p class="bp">We pride ourselves on our exclusive partnerships <br>
+                 between our friends at Hairgum and American crew. This collection specifically made for <br>
+                 any situation. Whether that be a night out, a casual work day or even a very important event.</p>
+
+          <h1 class="by">~The team</h1>
         </div>
         <div class="slide four" id="4">
           <h1 class="fh">contact us</h1>
+          <!-- form used to contact the company via email -->
           <div class="form">
             <form
               id="form"
@@ -152,10 +183,12 @@
       src="https://kit.fontawesome.com/cce18f0ce0.js"
       crossorigin="anonymous"
     ></script>
+    <!-- My JavaScript Files -->
     <script src="/JS/signup.js"></script>
     <script src="/JS/products.js"></script>
     <script src="/JS/cart.js"></script>
     <script src="/JS/Navbar.js"></script>
     <script src="/JS/admina.js"></script>
+    <script src="/JS/logout.js"></script>
   </body>
 </html>
