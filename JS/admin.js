@@ -30,7 +30,7 @@ function fetchProducts(url) {
       container.innerHTML = "";
       products.forEach((product) => {
         container.innerHTML += `<div class="product" id="${product[0]}">
-                                          <img src="${product[3]}" alt="">
+                                          <img class="fu" src="${product[3]}" alt="">
                                           <h6 class="productName">${product[2]}</h6>
                                           <p class="price">R${product[6]}</p>
                                           <div class="buttonContainer">
@@ -52,7 +52,7 @@ function fetchProducts(url) {
               console.log(product[2]);
               document.querySelector(".modal").id = product[0];
               document.querySelector(".modal").innerHTML = `
-                  <button class="closeM" onclick="toggleModal()">X</button>
+                  <button class="closeM" onclick="location.reload()">X</button>
                   <img class="mImg" src="${product[3]}" alt="">
                   <div class="modalstuff">
                     <div class="info">
